@@ -81,9 +81,9 @@ function App() {
         <div className="column">
           <h2>Projects</h2>
           <ul className="projects-list">
-            <li><a href="#">Bumi</a></li>
-            <li><a href="#">Parkr</a></li>
-            <li><a href="#">Focallus</a></li>
+            <li><a href="https://prakriti-hack.netlify.app/">Bumi</a></li>
+            <li><a href="https://getparkr.netlify.app/">Parkr</a></li>
+            <li><a href="https://github.com/SaiNel7/focallus">Focallus</a></li>
           </ul>
         </div>
         {/* <h2>The Wall</h2> */}
