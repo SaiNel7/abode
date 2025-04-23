@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import './App.css';
 import Blog from './Blog.jsx';
+import Bookshelf from './Bookshelf.jsx';
 import ScrollToTop from './ScrollToTop';
 import Icarus from './assets/icarus.jpg';
 
@@ -68,7 +69,7 @@ function Home() {
           <h2>musings</h2>
           <ul className="links-list">
             <li><Link to="/blog">posts</Link></li>
-            <li><a href="#">bookshelf</a></li>
+            <li><Link to="/bookshelf">bookshelf</Link></li>
           </ul>
         </div>
         
@@ -97,11 +98,12 @@ function Home() {
 function App() {
   return (
     <Router>
-      <ScrollToTop /> {/* Add this component to handle scrolling */}
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/blog/:slug" element={<Blog />} />
+        <Route path="/bookshelf" element={<Bookshelf />} />
       </Routes>
     </Router>
   )

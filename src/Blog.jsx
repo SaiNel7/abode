@@ -70,10 +70,10 @@ function Blog() {
     return (
       <div className="blog-container" ref={containerRef}>
         <div className="blog-header">
-          <h1>Article Not Found</h1>
+          <h1>article Not Found</h1>
           <Link to="/blog" className="back-link">back to writings</Link>
         </div>
-        <p>The article you're looking for doesn't exist.</p>
+        <p>the article you're looking for doesn't exist.</p>
         <div className="separator"></div>
       </div>
     );

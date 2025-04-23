@@ -1,0 +1,67 @@
+/* Bookshelf.css */
+.bookshelf-container {
+  width: 100%;
+  padding: 0rem 1rem 1rem 0rem;
+  overflow-x: hidden;
+}
+
+.bookshelf-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.bookshelf-header h1 {
+  font-size: 1.5em;
+  line-height: 1.1;
+  text-align: left;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.back-link {
+  text-decoration: none;
+  color: #333;
+  transition: color 0.2s;
+}
+
+.back-link:hover {
+  color: #0066cc;
+}
+
+.coming-soon {
+  margin: 50px 0;
+  text-align: center;
+}
+
+.coming-soon p {
+  font-size: 1.1em;
+  margin-bottom: 30px;
+  color: #555;
+}
+
+.coming-soon-text {
+  font-size: 1.8em !important;
+  color: #333 !important;
+  letter-spacing: 0.05em;
+  font-weight: 300;
+}
+
+.separator {
+  border-top: 1px solid #ddd;
+  margin-top: 40px;
+}
+
+/* Responsive styles for mobile */
+@media (max-width: 768px) {
+  .bookshelf-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  
+  .bookshelf-header h1 {
+    margin-bottom: 5px;
+  }
+}
