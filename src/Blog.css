@@ -1,0 +1,114 @@
+/* Blog.css with single scrolling */
+.blog-container {
+  width: 100%;
+  padding: 0rem 1rem 1rem 0rem;
+  overflow-x: hidden;
+  /* Remove any height constraints or overflow properties that create inner scrolling */
+}
+
+.blog-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.blog-header h1 {
+  font-size: 1.5em;
+  line-height: 1.1;
+  text-align: left;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.back-link {
+  text-decoration: none;
+  color: #333;
+  transition: color 0.2s;
+}
+
+.back-link:hover {
+  color: #0066cc;
+}
+
+.blog-posts {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.blog-post {
+  margin-bottom: 5px;
+}
+
+.post-title {
+  display: block;
+  text-decoration: none;
+  color: #333;
+  font-size: 1.2em;
+  font-weight: 500;
+  margin-bottom: 4px;
+  transition: color 0.2s;
+}
+
+.post-title:hover {
+  color: #000; /* Makes the title darker on hover */
+}
+
+.post-date, .article-date {
+  margin: 0;
+  font-size: 0.9em;
+  color: #666;
+}
+
+.article-date {
+  margin-bottom: 20px;
+}
+
+.article-content {
+  line-height: 1.6;
+  width: 100%;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  /* Remove any max-height or overflow properties */
+}
+
+.article-content h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 1.4em;
+  color: #333;
+  text-transform: none;
+  letter-spacing: normal;
+}
+
+.article-content p {
+  margin-bottom: 16px;
+}
+
+.article-content ul {
+  margin-bottom: 16px;
+  padding-left: 20px;
+}
+
+.article-content li {
+  margin-bottom: 8px;
+}
+
+.separator {
+  border-top: 1px solid #ddd;
+  margin-top: 40px;
+}
+
+/* Responsive styles for mobile */
+@media (max-width: 768px) {
+  .blog-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  
+  .blog-header h1 {
+    margin-bottom: 5px;
+  }
+}

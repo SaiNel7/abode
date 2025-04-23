@@ -1,12 +1,11 @@
-// App.jsx - Updated
-import { useState, useEffect } from 'react'
-import './App.css'
-import './Blog.jsx'
-import './Bookshelf.jsx'
-import './Bucket List.jsx'
-import Icarus from './assets/icarus.jpg'
+import { useState, useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import './App.css';
+import Blog from './Blog.jsx';
+import ScrollToTop from './ScrollToTop';
+import Icarus from './assets/icarus.jpg';
 
-function App() {
+function Home() {
   const words = ["Adventurer", "Dreamer", "Engineer", "Artist", "Writer", "Founder"];
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
   const [currentText, setCurrentText] = useState('');
@@ -66,24 +65,27 @@ function App() {
       </div>
       <div className="two-column-layout">
         <div className="column">
-          <h2>Musings</h2>
+          <h2>musings</h2>
           <ul className="links-list">
-            <li><a href="#">Blog</a></li>
-            <li><a href="#">Bookshelf</a></li>
-            <li><a href="#">Bucket List</a></li>
-            <li><a href="#">Gallery</a></li>
-            <li><a href="https://open.spotify.com/user/roaringhermit7?si=e1ad2e5d35c64fce">Spotify</a></li>
-            <li><a href="https://github.com/SaiNel7">Github</a></li>
-            <li><a href="https://www.linkedin.com/in/saikn/">LinkedIn</a></li>
+            <li><Link to="/blog">posts</Link></li>
+            <li><a href="#">bookshelf</a></li>
           </ul>
         </div>
         
         <div className="column">
-          <h2>Projects</h2>
+          <h2>projects</h2>
           <ul className="projects-list">
-            <li><a href="https://prakriti-hack.netlify.app/">Bumi</a></li>
-            <li><a href="https://getparkr.netlify.app/">Parkr</a></li>
-            <li><a href="https://github.com/SaiNel7/focallus">Focallus</a></li>
+            <li><a href="https://prakriti-hack.netlify.app/">bumi</a></li>
+            <li><a href="https://getparkr.netlify.app/">parkr</a></li>
+            <li><a href="https://github.com/SaiNel7/focallus">focallus</a></li>
+          </ul>
+        </div>
+        <div className="column">
+          <h2>socials</h2>
+          <ul className="socials-list">
+            <li><a href="https://open.spotify.com/user/roaringhermit7?si=e1ad2e5d35c64fce">spotify</a></li>
+            <li><a href="https://github.com/SaiNel7">github</a></li>
+            <li><a href="https://www.linkedin.com/in/saikn/">linkedIn</a></li>
           </ul>
         </div>
         {/* <h2>The Wall</h2> */}
@@ -92,4 +94,17 @@ function App() {
   )
 }
 
-export default App
+function App() {
+  return (
+    <Router>
+      <ScrollToTop /> {/* Add this component to handle scrolling */}
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/blog/:slug" element={<Blog />} />
+      </Routes>
+    </Router>
+  )
+}
+
+export default App;

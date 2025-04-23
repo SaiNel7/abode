@@ -1,0 +1,16 @@
+export const article = {
+  id: 1,
+  slug: "homecoming",
+  title: "Homecoming",
+  date: "October 27, 2024",
+  content: `
+    <p>Last summer, my first year at Cornell came to an end and I returned home to Toronto. As I roamed the bustling streets of Little India, the memories and stories carved into the architecture and environment came rushing back to me. My neighborhood is a tapestry of cultures, each thread representing a story of movement, of objects carried across oceans, and of memories that tie us to lands left behind.</p>
+
+    <p> The narrow valleys of this urban landscape were carved not only by flooding rivers and herds of moose, but by generations of immigrants. At the corner of Jefferson and 8th, an old printing press, reminiscent of the early English pioneers who first settled here, stands as a relic of a bygone era. Its rusting frame and faded signage whisper tales of the past. But now, it’s just another piece of the puzzle that makes up this diverse community. As I continue my walk, I pass a towering totem pole that stands proudly at the entrance to my neighborhood. This indigenous marker feels like a guardian, watching over the comings and goings of those who call this place home. The totem’s carved animalistic faces are a reminder of the land’s original stewards, their stories etched into wood, holding memories of a time long before the arrival of settlers, immigrants, and refugees. </p>
+
+    <p> The air is thick with the scents of sizzling samosas, steaming momos, and spicy kebabs, mingling together to create a sensory map of the world. Each dish tells a story of the people who brought them here, of the lands they left behind, and of the new lives they’ve built. As I strut down the street, the familiar sight of Mr. Mishra, a friendly uncle smoking outside his shop, catches my eye. He waves to me with a warm smile, a cigarette dangling from his lips. His presence is a comforting constant in my ever-changing world. Faded graffiti splatters the weathered walls of the buildings I pass, one reading “AZADI”—freedom in Urdu. The art tells the tale of the Bengali immigrants who fled religious persecution and found solace here in this foreign land. The graffiti, though faded, is a bold reminder of the struggles that brought so many to this place, a testament to the resilience of those who sought a better life. </p>
+
+    <p> I finally reach my apartment complex and make my way up the worn carpeted stairs. As I near my door, I see Abu, an aged Pakistani man, seated on a wooden rocking chair with a ruffled parrot nesting beside him. The bird squawks gibberish in Urdu, a cacophony of sounds that echoes the mix of languages spoken in this neighborhood. I take out my keys and enter my home, greeted by the familiar sight of my grandma calmly knitting a wool scarf. The sizzle of dosa on an iron pan welcomes me, and my mom’s voice rings out, “How was your day, kanna?” —a term of endearment in my native tongue, Telugu. The smell of the dosa fills the air, a comforting aroma that tells the tale of my people. Made from fermented rice, roughly ground, it is a simple dish that carries the weight of centuries of tradition. This is my home, where the stories of diaspora are told not just in words, but in the very spaces we inhabit.</p>
+
+  `
+};

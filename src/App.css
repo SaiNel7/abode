@@ -1,13 +1,22 @@
-/* App.css - Updated */
+/* App.css - Updated for single scrolling */
 #root {
   width: 40%;
-  margin: 0 auto;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  padding: 1rem;
+  padding: 2rem 1rem 1rem 2rem;
   text-align: left;
+  position: relative;
+  min-height: auto;
+}
+
+body {
+  /* Ensure body allows scrolling */
+  overflow-y: auto;
+}
+
+@media (max-width: 768px) {
+  #root {
+    width: 85%;
+    padding-top: 4rem;
+  }
 }
 
 .header-container {
@@ -61,22 +70,21 @@ h2 {
   margin-top: 0;
   margin-bottom: 5px;
   color: #666;
-  text-transform: uppercase;
   letter-spacing: 0.25px;
   font-weight: 500;
 }
 
-.links-list, .projects-list {
+.links-list, .projects-list, .socials-list {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-.links-list li, .projects-list li {
+.links-list li, .projects-list li, .socials-list li {
   margin-bottom: 2px;
 }
 
-.links-list a, .projects-list a {
+.links-list a, .projects-list a, .socials-list a {
   text-decoration: none;
   color: #333;
   transition: color 0.2s;
@@ -87,6 +95,9 @@ h2 {
 }
 .projects-list a:hover {
   color: #03a624;
+}
+.socials-list a:hover {
+  color: #95019a;
 }
 
 .profile-image {
@@ -100,15 +111,10 @@ h2 {
   max-width: 100%; 
   height: auto; 
   border-radius: 15px; 
-
 }
+
 /* Responsive styles for mobile */
 @media (max-width: 768px) {
-  #root {
-    padding-top: 35%;
-    width: 85%;
-  }
-  
   .two-column-layout {
     flex-direction: column;
   }
