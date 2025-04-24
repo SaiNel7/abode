@@ -6,7 +6,7 @@ export const article = {
   content: `
     <ul>
       <li>summit k2</li>
-      <li>build a unicorn by twenty-five</li>
+      <li>build a unicorn by thirty</li>
       <li>rajarajeshwari amman annadhānam center</li>
       <li>motorcycle through spiti valley</li>
       <li>become hokage </li>
