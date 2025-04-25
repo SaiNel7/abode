@@ -7,7 +7,7 @@ import ScrollToTop from './ScrollToTop';
 import Icarus from './assets/icarus.jpg';
 
 function Home() {
-  const words = ["Adventurer", "Dreamer", "Engineer", "Artist", "Writer", "Founder"];
+  const words = ["Wanderer", "Adventurer", "Dreamer", "Engineer", "Artist", "Writer", "Founder", "Everything", "Nothing"];
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
   const [currentText, setCurrentText] = useState('');
   const [isDeleting, setIsDeleting] = useState(false);
