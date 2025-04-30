@@ -61,6 +61,7 @@ function Blog() {
         </div>
         
         <div className="separator"></div>
+        <p>there are no detours</p> 
       </div>
     );
   }
