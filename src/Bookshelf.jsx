@@ -1,34 +1,52 @@
 import { Link } from 'react-router-dom';
 import './Bookshelf.css';
 import Siddhartha from "../src/bookcovers/fav/siddhartha.jpg"
+import TheAlchemist from "../src/bookcovers/fav/thealchemist.jpg"
+import MythOfSisyphus from "../src/bookcovers/fav/mythofsisyphus.jpg"
+import NorwegianWood from "../src/bookcovers/fav/norwegianwood.jpg"
+import SteveJobs from "../src/bookcovers/fav/jobs.jpg"
+import Pi from "../src/bookcovers/fav/lifeofpi.jpg"
+import Kafka from "../src/bookcovers/fav/metamorph.jpg"
+import Stranger from "../src/bookcovers/fav/stranger.jpg" 
+import CP from "../src/bookcovers/fav/c&p.jpg"
+import Gatsby from "../src/bookcovers/fav/gatsby.jpg"
+import Tintin from "../src/bookcovers/fav/tintin.jpg"
+import Naruto from "../src/bookcovers/fav/naruto.jpg"
 
+import AtomicHabits from "../src/bookcovers/curr/atomichabits.jpg"
+import GE from "../src/bookcovers/curr/greatexpectations.jpg"
+import MD from "../src/bookcovers/curr/motorcyclediaries.jpeg"
+
+import Neruda from "../src/bookcovers/list/neruda.jpg"
+import Algo from "../src/bookcovers/list/algorithms.jpg"
+import HackersPainters from "../src/bookcovers/list/h&p.jpg"
 function Bookshelf() {
   // Mock data for book sections
   const favorites = [
     { id: 1, title: "Siddhartha", cover: Siddhartha },
-    { id: 2, title: "The Alchemist", cover: "src/bookcovers/fav/thealchemist.jpg" },
-    { id: 3, title: "Myth of Sisyphus", cover: "src/bookcovers/fav/mythofsisyphus.jpg" },
-    { id: 4, title: "Norwegian Wood", cover: "src/bookcovers/fav/norwegianwood.jpg" },
-    { id: 5, title: "Steve Jobs", cover: "src/bookcovers/fav/jobs.jpg" },
-    { id: 6, title: "Life of Pi", cover: "src/bookcovers/fav/lifeofpi.jpg" },
-    { id: 7, title: "Metamorphosis", cover: "src/bookcovers/fav/metamorph.jpg" },
-    { id: 8, title: "The Stranger", cover: "src/bookcovers/fav/stranger.jpg" },
-    { id: 9, title: "Crime and Punishment", cover: "src/bookcovers/fav/c&p.jpg" },
-    { id: 10, title: "The Great Gatsby", cover: "src/bookcovers/fav/gatsby.jpg" },
-    { id: 11, title: "Tintin in Tibet", cover: "src/bookcovers/fav/tintin.jpg" },
-    { id: 12, title: "Naruto", cover: "src/bookcovers/fav/naruto.jpg" },
+    { id: 2, title: "The Alchemist", cover: TheAlchemist },
+    { id: 3, title: "Myth of Sisyphus", cover: MythOfSisyphus },
+    { id: 4, title: "Norwegian Wood", cover: NorwegianWood },
+    { id: 5, title: "Steve Jobs", cover: SteveJobs },
+    { id: 6, title: "Life of Pi", cover: Pi },
+    { id: 7, title: "Metamorphosis", cover: Kafka },
+    { id: 8, title: "The Stranger", cover: Stranger },
+    { id: 9, title: "Crime and Punishment", cover: CP },
+    { id: 10, title: "The Great Gatsby", cover: Gatsby },
+    { id: 11, title: "Tintin in Tibet", cover: Tintin },
+    { id: 12, title: "Naruto", cover: Naruto },
   ];
 
   const readingNow = [
-    { id: 1, title: "Atomic Habits", cover: "src/bookcovers/curr/atomichabits.jpg" },
-    { id: 2, title: "Great Expectations", cover: "src/bookcovers/curr/greatexpectations.jpg" },
-    { id: 3, title: "Motorcycle Diaries", cover: "/src/bookcovers/curr/motorcyclediaries.jpeg" },
+    { id: 1, title: "Atomic Habits", cover: AtomicHabits },
+    { id: 2, title: "Great Expectations", cover: GE },
+    { id: 3, title: "Motorcycle Diaries", cover: MD },
   ];
 
   const nextToRead = [
-    { id: 1, title: "Love Poems", cover: "src/bookcovers/list/neruda.jpg" },
-    { id: 2, title: "Algorithm Design", cover: "src/bookcovers/list/algorithms.jpg" },
-    { id: 3, title: "Hackers and Painters", cover: "src/bookcovers/list/h&p.jpg" },
+    { id: 1, title: "Love Poems", cover: Neruda },
+    { id: 2, title: "Algorithm Design", cover: Algo },
+    { id: 3, title: "Hackers and Painters", cover: HackersPainters },
     // { id: 4, title: "Next Book 4", cover: "/api/placeholder/150/225" },
     // { id: 5, title: "Next Book 5", cover: "/api/placeholder/150/225" },
     // { id: 6, title: "Next Book 6", cover: "/api/placeholder/150/225" },
