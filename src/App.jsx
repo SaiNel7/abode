@@ -76,7 +76,7 @@ function Home() {
         <div className="column">
           <h2>projects</h2>
           <ul className="projects-list">
-            <li><a href="https://prakriti-hack.netlify.app/">bumi</a></li>
+            <li><a href="https://prakriti-hack.netlify.app/">prakriti</a></li>
             <li><a href="https://getparkr.netlify.app/">parkr</a></li>
             <li><a href="https://github.com/SaiNel7/focallus">focallus</a></li>
           </ul>
