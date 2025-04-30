@@ -25,12 +25,12 @@ function Bookshelf() {
   ];
 
   const nextToRead = [
-    { id: 1, title: "Next Book 1", cover: "/api/placeholder/150/225" },
-    { id: 2, title: "Next Book 2", cover: "/api/placeholder/150/225" },
-    { id: 3, title: "Next Book 3", cover: "/api/placeholder/150/225" },
-    { id: 4, title: "Next Book 4", cover: "/api/placeholder/150/225" },
-    { id: 5, title: "Next Book 5", cover: "/api/placeholder/150/225" },
-    { id: 6, title: "Next Book 6", cover: "/api/placeholder/150/225" },
+    { id: 1, title: "Love Poems", cover: "src/bookcovers/list/neruda.jpg" },
+    { id: 2, title: "Algorithm Design", cover: "src/bookcovers/list/algorithms.jpg" },
+    { id: 3, title: "Hackers and Painters", cover: "src/bookcovers/list/h&p.jpg" },
+    // { id: 4, title: "Next Book 4", cover: "/api/placeholder/150/225" },
+    // { id: 5, title: "Next Book 5", cover: "/api/placeholder/150/225" },
+    // { id: 6, title: "Next Book 6", cover: "/api/placeholder/150/225" },
   ];
 
   return (
