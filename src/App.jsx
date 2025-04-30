@@ -62,7 +62,7 @@ function Home() {
       New Delhi --{'>'} Doha --{'>'} Toronto --{'>'} Philly --{'>'} Noo Yawk --{'>'} Ithaca<br/><br/>
         Namaskāram! Welcome to my humble internet abode. I'm a student of life (currently at Cornell) who's intrigued by both hackers and painters. 
         <br/><br/>
-        Shoot me an email at skn29 [at] cornell [dot] edu
+        Shoot me an email at skn29@cornell.edu
         <br/><br/>
         There are no detours.
       </div>
