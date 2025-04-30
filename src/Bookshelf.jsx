@@ -1,10 +1,11 @@
 import { Link } from 'react-router-dom';
 import './Bookshelf.css';
+import Siddhartha from "../src/bookcovers/fav/siddhartha.jpg"
 
 function Bookshelf() {
   // Mock data for book sections
   const favorites = [
-    { id: 1, title: "Siddhartha", cover: "../src/bookcovers/fav/siddhartha.jpg" },
+    { id: 1, title: "Siddhartha", cover: Siddhartha },
     { id: 2, title: "The Alchemist", cover: "src/bookcovers/fav/thealchemist.jpg" },
     { id: 3, title: "Myth of Sisyphus", cover: "src/bookcovers/fav/mythofsisyphus.jpg" },
     { id: 4, title: "Norwegian Wood", cover: "src/bookcovers/fav/norwegianwood.jpg" },
