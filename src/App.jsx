@@ -63,6 +63,8 @@ function Home() {
         Namaskāram! Welcome to my humble internet abode. I'm a student of life (currently at Cornell) who's intrigued by both hackers and painters. 
         <br/><br/>
         Shoot me an email at skn29 [at] cornell [dot] edu
+        <br/><br/>
+        There are no detours.
       </div>
       <div className="two-column-layout">
         <div className="column">
