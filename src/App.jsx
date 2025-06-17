@@ -7,7 +7,7 @@ import ScrollToTop from './ScrollToTop';
 import Icarus from './assets/icarus.jpg';
 
 function Home() {
-  const words = ["Dreamer", "Product Owner", "Engineer", "Artist", "Writer", "Founder", "Adventurer"];
+  const words = ["Engineer", "Product Thinker", "Artist", "Writer", "Founder", "Adventurer",];
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
   const [currentText, setCurrentText] = useState('');
   const [isDeleting, setIsDeleting] = useState(false);
@@ -60,7 +60,7 @@ function Home() {
       </div>
       <div className="bio-section">
       New Delhi --{'>'} Doha --{'>'} Toronto --{'>'} Philly --{'>'} Noo Yawk --{'>'} Ithaca<br/><br/>
-        Namaskāram! Welcome to my humble internet abode. I'm a student of life (currently at Cornell) who's intrigued by both hackers and painters. 
+        Namaskāram! Welcome to my internet abode. I'm a student of life (currently at Cornell) who's intrigued by both hackers and painters. 
         <br/><br/>
         Shoot me an email at skn29@cornell.edu
       </div>
