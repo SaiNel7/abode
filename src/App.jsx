@@ -85,6 +85,7 @@ function Home() {
           <h2>socials</h2>
           <ul className="socials-list">
             <li><a href="https://open.spotify.com/user/roaringhermit7?si=e1ad2e5d35c64fce">spotify</a></li>
+            <li><a href="https://medium.com/@skn29">medium</a></li>
             <li><a href="https://github.com/SaiNel7">github</a></li>
             <li><a href="https://www.linkedin.com/in/saikn/">linkedIn</a></li>
           </ul>
