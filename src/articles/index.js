@@ -1,10 +1,10 @@
-import { article as imperialFantasies } from './imperial-fantasies';
+// import { article as imperialFantasies } from './imperial-fantasies';
 import { article as homecoming } from './homecoming';
 import { article as bucketList } from './bucket-list';
 
 
 export const blogPosts = [
-  imperialFantasies,
+  // imperialFantasies,
   homecoming,
   bucketList,
 ].sort((a, b) => {
@@ -15,7 +15,7 @@ export const blogPosts = [
 });
 
 export {
-  imperialFantasies,
+  // imperialFantasies,
   homecoming,
   bucketList,
 };
