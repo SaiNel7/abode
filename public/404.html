@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="refresh" content="0; url=/" />
+    <script>
+      // GitHub Pages and other static hosts: preserve the path for SPA routing
+      (function() {
+        var redirectPath = sessionStorage.getItem('redirect-path');
+        if (!redirectPath) {
+          redirectPath = location.pathname + location.search + location.hash;
+          sessionStorage.setItem('redirect-path', redirectPath);
+        }
+        location.replace('/');
+      })();
+    </script>
+  </head>
+  <body></body>
+  </html>
+

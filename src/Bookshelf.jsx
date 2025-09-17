@@ -1,25 +1,25 @@
 import { Link } from 'react-router-dom';
 import './Bookshelf.css';
-import Siddhartha from "../src/bookcovers/fav/siddhartha.jpg"
-import TheAlchemist from "../src/bookcovers/fav/thealchemist.jpg"
-import MythOfSisyphus from "../src/bookcovers/fav/mythofsisyphus.jpg"
-import NorwegianWood from "../src/bookcovers/fav/norwegianwood.jpg"
-import SteveJobs from "../src/bookcovers/fav/jobs.jpg"
-import Pi from "../src/bookcovers/fav/lifeofpi.jpg"
-import Kafka from "../src/bookcovers/fav/metamorph.jpg"
-import Stranger from "../src/bookcovers/fav/stranger.jpg" 
-import CP from "../src/bookcovers/fav/c&p.jpg"
-import Gatsby from "../src/bookcovers/fav/gatsby.jpg"
-import Tintin from "../src/bookcovers/fav/tintin.jpg"
-import Naruto from "../src/bookcovers/fav/naruto.jpg"
+import Siddhartha from "./bookcovers/fav/siddhartha.jpg"
+import TheAlchemist from "./bookcovers/fav/thealchemist.jpg"
+import MythOfSisyphus from "./bookcovers/fav/mythofsisyphus.jpg"
+import NorwegianWood from "./bookcovers/fav/norwegianwood.jpg"
+import SteveJobs from "./bookcovers/fav/jobs.jpg"
+import Pi from "./bookcovers/fav/lifeofpi.jpg"
+import Kafka from "./bookcovers/fav/metamorph.jpg"
+import Stranger from "./bookcovers/fav/stranger.jpg" 
+import CP from "./bookcovers/fav/c&p.jpg"
+import Gatsby from "./bookcovers/fav/gatsby.jpg"
+import Tintin from "./bookcovers/fav/tintin.jpg"
+import Naruto from "./bookcovers/fav/naruto.jpg"
 
-import AtomicHabits from "../src/bookcovers/curr/atomichabits.jpg"
-import GE from "../src/bookcovers/curr/greatexpectations.jpg"
-import MD from "../src/bookcovers/curr/motorcyclediaries.jpeg"
+import AtomicHabits from "./bookcovers/curr/atomichabits.jpg"
+import GE from "./bookcovers/curr/greatexpectations.jpg"
+import MD from "./bookcovers/curr/motorcyclediaries.jpeg"
 
-import Neruda from "../src/bookcovers/list/neruda.jpg"
-import Algo from "../src/bookcovers/list/algorithms.jpg"
-import HackersPainters from "../src/bookcovers/list/h&p.jpg"
+import Neruda from "./bookcovers/list/neruda.jpg"
+import Algo from "./bookcovers/list/algorithms.jpg"
+import HackersPainters from "./bookcovers/list/h&p.jpg"
 function Bookshelf() {
   // Mock data for book sections
   const favorites = [

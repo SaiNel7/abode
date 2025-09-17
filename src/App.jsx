@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Link, useNavigate } from 'react-router-dom';
 import './App.css';
 import Blog from './Blog.jsx';
 import Bookshelf from './Bookshelf.jsx';
@@ -100,6 +100,7 @@ function App() {
   return (
     <Router>
       <ScrollToTop />
+      <RedirectHandler />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/blog" element={<Blog />} />
@@ -111,3 +112,15 @@ function App() {
 }
 
 export default App;
+
+function RedirectHandler() {
+  const navigate = useNavigate();
+  useEffect(() => {
+    const pending = sessionStorage.getItem('redirect-path');
+    if (pending) {
+      sessionStorage.removeItem('redirect-path');
+      navigate(pending, { replace: true });
+    }
+  }, [navigate]);
+  return null;
+}
