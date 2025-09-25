@@ -7,7 +7,7 @@ import ScrollToTop from './ScrollToTop';
 import Icarus from './assets/icarus.jpg';
 
 function Home() {
-  const words = ["Aspiring Founder", "Builder", "Strategist", "Engineer","Artist", "Writer", "Student",];
+  const words = ["Aspiring Founder", "Builder", "Strategist", "Engineer", "Artist", "Writer", "Student",];
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
   const [currentText, setCurrentText] = useState('');
   const [isDeleting, setIsDeleting] = useState(false);
@@ -84,10 +84,10 @@ function Home() {
         <div className="column">
           <h2>socials</h2>
           <ul className="socials-list">
-            <li><a href="https://open.spotify.com/user/roaringhermit7?si=e1ad2e5d35c64fce">spotify</a></li>
-            <li><a href="https://medium.com/@skn29">medium</a></li>
+            {/* <li><a href="https://open.spotify.com/user/roaringhermit7?si=e1ad2e5d35c64fce">spotify</a></li> */}
             <li><a href="https://github.com/SaiNel7">github</a></li>
             <li><a href="https://www.linkedin.com/in/saikn/">linkedIn</a></li>
+            <li><a href="https://medium.com/@skn29">medium</a></li> 
           </ul>
         </div>
         {/* <h2>The Wall</h2> */}
