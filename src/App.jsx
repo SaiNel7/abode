@@ -78,6 +78,8 @@ function Home() {
           <ul className="projects-list">
             <li><a href="https://prakriti-hack.netlify.app/">prakriti</a></li>
             <li><a href="https://getparkr.netlify.app/">parkr</a></li>
+            <li><a href="https://socratic1100.netlify.app/">socratic</a></li>
+            <li><a href="https://svtsrideshare.netlify.app/">svts-rideshare</a></li>
             <li><a href="https://github.com/SaiNel7/focallus">focallus</a></li>
           </ul>
         </div>
