@@ -2,6 +2,7 @@
 import { article as homecoming } from './homecoming';
 import { article as bucketList } from './bucket-list';
 import { article as hume } from './hume';
+import { article as holbach } from './holbach';
 
 
 export const blogPosts = [
@@ -9,6 +10,7 @@ export const blogPosts = [
   homecoming,
   bucketList,
   hume,
+  holbach,
 ].sort((a, b) => {
   const dateA = new Date(a.date);
   const dateB = new Date(b.date);
@@ -20,5 +22,6 @@ export {
   // imperialFantasies,
   homecoming,
   bucketList,
-  hume,
+  hume, 
+  holbach,
 };
