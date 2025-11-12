@@ -1,4 +1,51 @@
 /* App.css - Updated for single scrolling */
+
+/* Loading screen styles */
+.loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #f2f0ef;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  opacity: 1;
+  transition: opacity 0.6s ease-out;
+  pointer-events: none;
+}
+
+.loading-screen.fade-out {
+  opacity: 0;
+}
+
+.lotus-loader {
+  width: 120px;
+  height: 120px;
+  animation: lotus-pulse 2s ease-in-out infinite;
+}
+
+@keyframes lotus-pulse {
+  0%, 100% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+/* Main content fade-in */
+.main-content {
+  opacity: 0;
+  transition: opacity 1s ease-in;
+}
+
+.main-content.fade-in {
+  opacity: 1;
+}
+
 #root {
   width: 40%;
   padding: 2rem 1rem 1rem 2rem;
@@ -115,6 +162,11 @@ h2 {
 
 /* Responsive styles for mobile */
 @media (max-width: 768px) {
+  .lotus-loader {
+    width: 80px;
+    height: 80px;
+  }
+  
   .two-column-layout {
     flex-direction: column;
   }

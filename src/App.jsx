@@ -53,7 +53,7 @@ function Home() {
     <>
       {/* <div className="profile-image">
         <img src={Icarus} alt="Icarus painting" />
-      </div> */}
+      </div>  */}
       <div className="header-container">
         <h1>Sai Nellutla:</h1>
         <dynamic>{currentText}<span className="cursor">|</span></dynamic>
@@ -99,17 +99,46 @@ function Home() {
 }
 
 function App() {
+  const [isLoading, setIsLoading] = useState(true);
+  const [showLoader, setShowLoader] = useState(true);
+
+  useEffect(() => {
+    // Start fade-out after 1.8 seconds
+    const fadeTimer = setTimeout(() => {
+      setIsLoading(false);
+    }, 1800);
+
+    // Remove loader from DOM after fade completes
+    const removeTimer = setTimeout(() => {
+      setShowLoader(false);
+    }, 2600);
+
+    return () => {
+      clearTimeout(fadeTimer);
+      clearTimeout(removeTimer);
+    };
+  }, []);
+
   return (
-    <Router>
-      <ScrollToTop />
-      <RedirectHandler />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/blog" element={<Blog />} />
-        <Route path="/blog/:slug" element={<Blog />} />
-        <Route path="/bookshelf" element={<Bookshelf />} />
-      </Routes>
-    </Router>
+    <>
+      {showLoader && (
+        <div className={`loading-screen ${!isLoading ? 'fade-out' : ''}`}>
+          <img src="/lotus.png" alt="Loading" className="lotus-loader" />
+        </div>
+      )}
+      <div className={`main-content ${!isLoading ? 'fade-in' : ''}`}>
+        <Router>
+          <ScrollToTop />
+          <RedirectHandler />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/blog/:slug" element={<Blog />} />
+            <Route path="/bookshelf" element={<Bookshelf />} />
+          </Routes>
+        </Router>
+      </div>
+    </>
   )
 }
 
