@@ -1,3 +1,4 @@
+import { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import './Friends.css';
 
@@ -11,27 +12,27 @@ const thinkers = [
   },
   {
     id: 2,
+    name: "Buddha",
+    doodle: "/doodles/buddha.png",
+    link: "https://en.wikipedia.org/wiki/Gautama_Buddha"
+  },
+  {
+    id: 3,
     name: "Friedrich Nietzsche",
     doodle: "/doodles/nietzsche.png",
     link: "https://en.wikipedia.org/wiki/Friedrich_Nietzsche"
   },
   {
-    id: 3,
+    id: 4,
     name: "Adi Shankara",
     doodle: "/doodles/shankara.png",
     link: "https://en.wikipedia.org/wiki/Adi_Shankara"
   },
   {
-    id: 4,
+    id: 5,
     name: "Diogenes the Cynic",
     doodle: "/doodles/diogenes.png",
     link: "https://en.wikipedia.org/wiki/diogenes"
-  },
-  {
-    id: 5,
-    name: "Buddha",
-    doodle: "/doodles/buddha.png",
-    link: "https://en.wikipedia.org/wiki/Gautama_Buddha"
   },
   {
     id: 6,
@@ -97,12 +98,49 @@ function Friends() {
 
 // PersonCard component for each doodle
 function PersonCard({ person }) {
+  const [showBubble, setShowBubble] = useState(false);
+  const hoverTimeoutRef = useRef(null);
+  const isCamus = person.name === "Albert Camus";
+
   const handleClick = () => {
     window.open(person.link, '_blank', 'noopener,noreferrer');
   };
 
+  const handleMouseEnter = () => {
+    if (isCamus) {
+      // Set a timeout for 1.5 seconds
+      hoverTimeoutRef.current = setTimeout(() => {
+        setShowBubble(true);
+      }, 1500);
+    }
+  };
+
+  const handleMouseLeave = () => {
+    if (isCamus) {
+      // Clear the timeout if user stops hovering before 1.5s
+      if (hoverTimeoutRef.current) {
+        clearTimeout(hoverTimeoutRef.current);
+      }
+      setShowBubble(false);
+    }
+  };
+
+  // Cleanup timeout on unmount
+  useEffect(() => {
+    return () => {
+      if (hoverTimeoutRef.current) {
+        clearTimeout(hoverTimeoutRef.current);
+      }
+    };
+  }, []);
+
   return (
-    <div className="person-card" onClick={handleClick}>
+    <div 
+      className="person-card" 
+      onClick={handleClick}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+    >
       <div className="doodle-container">
         <img 
           src={person.doodle} 
@@ -113,6 +151,11 @@ function PersonCard({ person }) {
             e.target.style.display = 'none';
           }}
         />
+        {isCamus && showBubble && (
+          <div className="speech-bubble">
+            one must imagine sai happy
+          </div>
+        )}
       </div>
       <div className="person-name">{person.name}</div>
     </div>
