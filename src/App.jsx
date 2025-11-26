@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route, Link, useNavigate } from 'react
 import './App.css';
 import Blog from './Blog.jsx';
 import Bookshelf from './Bookshelf.jsx';
+import Friends from './Friends.jsx';
 import ScrollToTop from './ScrollToTop';
 import Icarus from './assets/icarus.jpg';
 
@@ -70,6 +71,7 @@ function Home() {
           <ul className="links-list">
             <li><Link to="/blog">posts</Link></li>
             <li><Link to="/bookshelf">bookshelf</Link></li>
+            <li><Link to="/friends">friends</Link></li>
           </ul>
         </div>
         
@@ -135,6 +137,7 @@ function App() {
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/:slug" element={<Blog />} />
             <Route path="/bookshelf" element={<Bookshelf />} />
+            <Route path="/friends" element={<Friends />} />
           </Routes>
         </Router>
       </div>
