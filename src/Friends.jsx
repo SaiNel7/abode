@@ -15,18 +15,18 @@ const thinkers = [
     doodle: "/doodles/nietzsche.png",
     link: "https://en.wikipedia.org/wiki/Friedrich_Nietzsche"
   },
-  // {
-  //   id: 3,
-  //   name: "Adi Shankara",
-  //   doodle: "/doodles/shankara.png",
-  //   link: "https://en.wikipedia.org/wiki/Adi_Shankara"
-  // },
-  // {
-  //   id: 4,
-  //   name: "Mengzi",
-  //   doodle: "/doodles/mengzi.png",
-  //   link: "https://en.wikipedia.org/wiki/Mencius"
-  // },
+  {
+    id: 3,
+    name: "Adi Shankara",
+    doodle: "/doodles/shankara.png",
+    link: "https://en.wikipedia.org/wiki/Adi_Shankara"
+  },
+  {
+    id: 4,
+    name: "Diogenes the Cynic",
+    doodle: "/doodles/diogenes.png",
+    link: "https://en.wikipedia.org/wiki/diogenes"
+  },
   {
     id: 5,
     name: "Buddha",
@@ -37,20 +37,20 @@ const thinkers = [
     id: 6,
     name: "Kilian Weinberger",
     doodle: "/doodles/kilian.png",
-    link: "https://www.cs.cornell.edu/~kilian/"}
-  // },
-  // {
-  //   id: 7,
-  //   name: "Eva Tardos",
-  //   doodle: "/doodles/tardos.png",
-  //   link: "https://en.wikipedia.org/wiki/%C3%89va_Tardos"
-  // },
-  // {
-  //   id: 8,
-  //   name: "Haran Aiya",
-  //   doodle: "/doodles/haran.png",
-  //   link: "https://www.youtube.com/@HaranAiya"
-  // },
+    link: "https://www.cs.cornell.edu/~kilian/"
+  },
+  {
+    id: 7,
+    name: "Éva Tardos",
+    doodle: "/doodles/tardos.png",
+    link: "https://en.wikipedia.org/wiki/%C3%89va_Tardos"
+  },
+  {
+    id: 8,
+    name: "Haran Aiya",
+    doodle: "/doodles/aiya.png",
+    link: ""
+  },
   // {
   //   id: 9,
   //   name: "Jiddu Krishnamurti",
