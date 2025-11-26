@@ -39,18 +39,18 @@ const thinkers = [
     doodle: "/doodles/kilian.png",
     link: "https://www.cs.cornell.edu/~kilian/"
   },
-  {
-    id: 7,
-    name: "Éva Tardos",
-    doodle: "/doodles/tardos.png",
-    link: "https://en.wikipedia.org/wiki/%C3%89va_Tardos"
-  },
-  {
-    id: 8,
-    name: "Haran Aiya",
-    doodle: "/doodles/aiya.png",
-    link: ""
-  },
+  // {
+  //   id: 7,
+  //   name: "Éva Tardos",
+  //   doodle: "/doodles/tardos.png",
+  //   link: "https://en.wikipedia.org/wiki/%C3%89va_Tardos"
+  // },
+  // {
+  //   id: 8,
+  //   name: "Haran Aiya",
+  //   doodle: "/doodles/aiya.png",
+  //   link: ""
+  // },
   // {
   //   id: 9,
   //   name: "Jiddu Krishnamurti",
