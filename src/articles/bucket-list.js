@@ -6,12 +6,14 @@ export const article = {
   content: `
     <ul>
       <li>summit annapurna I</li>
-      <li>build a unicorn by thirty</li>
+      <li>build a unicorn</li>
       <li>write a bestseller</li>
       <li>motorcycle through spiti valley</li>
       <li>get a pilot's license</li>
       <li>become hokage </li>
       <li>get a drivers license</li>
+      <li>meet lebron</li> 
+      <li class="completed">live like a monk in tibet</li>
     </ul>
 
   `
