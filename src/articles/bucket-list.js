@@ -12,7 +12,6 @@ export const article = {
       <li>get a pilot's license</li>
       <li>become hokage </li>
       <li>get a drivers license</li>
-      <li>meet lebron</li> 
       <li class="completed">live like a monk in tibet</li>
     </ul>
 
