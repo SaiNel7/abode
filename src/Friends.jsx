@@ -46,12 +46,12 @@ const thinkers = [
   //   doodle: "/doodles/tardos.png",
   //   link: "https://en.wikipedia.org/wiki/%C3%89va_Tardos"
   // },
-  // {
-  //   id: 8,
-  //   name: "Haran Aiya",
-  //   doodle: "/doodles/aiya.png",
-  //   link: ""
-  // },
+  {
+    id: 8,
+    name: "Aiya",
+    doodle: "/doodles/aiya.png",
+    link: ""
+  },
   // {
   //   id: 9,
   //   name: "Jiddu Krishnamurti",
@@ -103,7 +103,9 @@ function PersonCard({ person }) {
   const isCamus = person.name === "Albert Camus";
 
   const handleClick = () => {
-    window.open(person.link, '_blank', 'noopener,noreferrer');
+    if (person.link) {
+      window.open(person.link, '_blank', 'noopener,noreferrer');
+    }
   };
 
   const handleMouseEnter = () => {
@@ -136,7 +138,7 @@ function PersonCard({ person }) {
 
   return (
     <div 
-      className="person-card" 
+      className={`person-card ${!person.link ? 'no-link' : ''}`}
       onClick={handleClick}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}

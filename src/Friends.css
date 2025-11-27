@@ -57,6 +57,14 @@
   transform: translateY(-5px);
 }
 
+.person-card.no-link {
+  cursor: default;
+}
+
+.person-card.no-link:hover {
+  transform: translateY(-5px);
+}
+
 .doodle-container {
   position: relative;
   width: 100px;
