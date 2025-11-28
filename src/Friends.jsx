@@ -22,11 +22,17 @@ const thinkers = [
     doodle: "/doodles/nietzsche.png",
     link: "https://en.wikipedia.org/wiki/Friedrich_Nietzsche"
   },
+  // {
+  //   id: 4,
+  //   name: "Adi Shankara",
+  //   doodle: "/doodles/shankara.png",
+  //   link: "https://en.wikipedia.org/wiki/Adi_Shankara"
+  // },
   {
     id: 4,
-    name: "Adi Shankara",
-    doodle: "/doodles/shankara.png",
-    link: "https://en.wikipedia.org/wiki/Adi_Shankara"
+    name: "Paul Graham",
+    doodle: "/doodles/graham.png",
+    link: "https://www.paulgraham.com/index.html"
   },
   {
     id: 5,
