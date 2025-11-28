@@ -46,12 +46,12 @@ const thinkers = [
   //   doodle: "/doodles/tardos.png",
   //   link: "https://en.wikipedia.org/wiki/%C3%89va_Tardos"
   // },
-  {
-    id: 8,
-    name: "Aiya",
-    doodle: "/doodles/aiya.png",
-    link: ""
-  },
+  // {
+  //   id: 8,
+  //   name: "Aiya",
+  //   doodle: "/doodles/aiya.png",
+  //   link: ""
+  // },
   // {
   //   id: 9,
   //   name: "Jiddu Krishnamurti",
