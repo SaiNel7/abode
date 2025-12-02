@@ -90,7 +90,7 @@ function Friends() {
 
       {friends.length > 0 && (
         <div className="wall-section">
-          <h2 className="wall-title">Friends</h2>
+          <h2 className="wall-title">friends</h2>
           <div className="wall-grid">
             {friends.map(person => (
               <PersonCard key={person.id} person={person} />
@@ -98,6 +98,9 @@ function Friends() {
           </div>
         </div>
       )}
+      {/* <p>page in progress</p> */}
+      <div className="separator"></div>
+      <p style={{ fontStyle: 'italic', fontSize: '0.8em' }}>doodles by me</p>
     </div>
   );
 }
