@@ -8,7 +8,7 @@ const thinkers = [
     id: 1,
     name: "Albert Camus",
     doodle: "/doodles/camus.png",
-    link: "https://en.wikipedia.org/wiki/Albert_Camus"
+    link: "https://plato.stanford.edu/entries/camus/"
   },
   {
     id: 2,
@@ -20,13 +20,13 @@ const thinkers = [
     id: 3,
     name: "Friedrich Nietzsche",
     doodle: "/doodles/nietzsche.png",
-    link: "https://en.wikipedia.org/wiki/Friedrich_Nietzsche"
+    link: "https://plato.stanford.edu/entries/nietzsche/"
   },
   // {
   //   id: 4,
   //   name: "Adi Shankara",
   //   doodle: "/doodles/shankara.png",
-  //   link: "https://en.wikipedia.org/wiki/Adi_Shankara"
+  //   link: "https://plato.stanford.edu/entries/shankara/"
   // },
   {
     id: 4,
@@ -36,7 +36,7 @@ const thinkers = [
   },
   {
     id: 5,
-    name: "Diogenes the Cynic",
+    name: "Diogenes",
     doodle: "/doodles/diogenes.png",
     link: "https://en.wikipedia.org/wiki/diogenes"
   },
