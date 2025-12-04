@@ -8,14 +8,14 @@ import ScrollToTop from './ScrollToTop';
 import Icarus from './assets/icarus.jpg';
 
 function Home() {
-  const words = ["Product Manager", "Engineer", "Aspiring Founder", "Writer", "Artist", "Student"];
+  const words = ["Builder of Things", "Optimist", "Engineer", "Tinkerer", "Writer", "Artist"];
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
   const [currentText, setCurrentText] = useState('');
   const [isDeleting, setIsDeleting] = useState(false);
   
   useEffect(() => {
     const typeSpeed = 150;
-    const deleteSpeed = 75;
+    const deleteSpeed = 100;
     const pauseBeforeDelete = 1000;
     const pauseBeforeNextWord = 500;
     
