@@ -71,7 +71,7 @@ function Home() {
           <ul className="links-list">
             <li><Link to="/blog">posts</Link></li>
             <li><Link to="/bookshelf">bookshelf</Link></li>
-            <li><Link to="/friends">friends</Link></li>
+            <li><Link to="/friends">catalysts</Link></li>
           </ul>
         </div>
         

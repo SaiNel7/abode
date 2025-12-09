@@ -69,23 +69,33 @@ const thinkers = [
 // Friends data structure - to be populated in next iteration
 const friends = [
   // Will be added in next iteration
+  {
+    id: 1,
+    name: "Nihaal Konda",
+    doodle: "/doodles/nihaal.png",
+    link: "https://www.linkedin.com/in/nihaalkonda/"
+  },
+  {
+    id: 2,
+    name: "Nick Channg",
+    doodle: "/doodles/nick.png",
+    link: "https://nickchanng.com/"
+  },
+  {
+    id: 3,
+    name: "Sujith Kakkireni",
+    doodle: "/doodles/sujith.png",
+    link: "https://www.linkedin.com/in/saisujith-kakkireni-791b752b1/"
+  },
+  
 ];
 
 function Friends() {
   return (
     <div className="friends-container">
       <div className="friends-header">
-        <h1>friends</h1>
+        <h1>catalysts</h1>
         <Link to="/" className="back-link">back to home</Link>
-      </div>
-      
-      <div className="wall-section">
-        <h2 className="wall-title">thought mentors</h2>
-        <div className="wall-grid">
-          {thinkers.map(person => (
-            <PersonCard key={person.id} person={person} />
-          ))}
-        </div>
       </div>
 
       {friends.length > 0 && (
@@ -98,7 +108,15 @@ function Friends() {
           </div>
         </div>
       )}
-      {/* <p>page in progress</p> */}
+            <div className="wall-section">
+        <h2 className="wall-title">guides</h2>
+        <div className="wall-grid">
+          {thinkers.map(person => (
+            <PersonCard key={person.id} person={person} />
+          ))}
+        </div>
+      </div>
+
       <div className="separator"></div>
       <p style={{ fontStyle: 'italic', fontSize: '0.8em' }}>doodles by me</p>
     </div>

@@ -40,7 +40,7 @@
 
 .wall-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 40px 30px;
   margin-top: 20px;
 }
@@ -146,14 +146,13 @@
   text-align: center;
   font-size: 0.9em;
   color: #333;
-  max-width: 120px;
+  max-width: 100%;
   word-wrap: break-word;
 }
 
 /* Responsive design */
 @media (max-width: 768px) {
   .wall-grid {
-    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
     gap: 30px 20px;
   }
   
@@ -177,20 +176,24 @@
 
 @media (max-width: 480px) {
   .wall-grid {
-    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
     gap: 25px 15px;
   }
   
   .doodle-container {
-    width: 70px;
-    height: 70px;
+    width: 60px;
+    height: 60px;
+  }
+  
+  .person-name {
+    font-size: 0.75em;
   }
   
   .speech-bubble {
     font-size: 0.55em;
     padding: 4px 6px;
-    left: 75px;
-    width: 50px;
+    left: 65px;
+    width: 45px;
+    height: 45px;
   }
 }
 
