@@ -12,16 +12,17 @@ import CP from "./bookcovers/fav/c&p.jpg"
 import Gatsby from "./bookcovers/fav/gatsby.jpg"
 import Tintin from "./bookcovers/fav/tintin.jpg"
 import Naruto from "./bookcovers/fav/naruto.jpg"
-
 import AtomicHabits from "./bookcovers/curr/atomichabits.jpg"
 import GE from "./bookcovers/curr/greatexpectations.jpg"
 import MD from "./bookcovers/curr/motorcyclediaries.jpeg"
+import Algo from "./bookcovers/curr/algorithms.jpg"
+import BaC from "./bookcovers/fav/bornacrime.jpg"
+
 
 import Neruda from "./bookcovers/list/neruda.jpg"
-import Algo from "./bookcovers/list/algorithms.jpg"
+import thecomingwave from "./bookcovers/list/thecomingwave.jpg"
 import HackersPainters from "./bookcovers/list/h&p.jpg"
 function Bookshelf() {
-  // Mock data for book sections
   const favorites = [
     { id: 1, title: "Siddhartha", cover: Siddhartha },
     { id: 2, title: "The Alchemist", cover: TheAlchemist },
@@ -32,24 +33,24 @@ function Bookshelf() {
     { id: 7, title: "Metamorphosis", cover: Kafka },
     { id: 8, title: "The Stranger", cover: Stranger },
     { id: 9, title: "Crime and Punishment", cover: CP },
-    { id: 10, title: "The Great Gatsby", cover: Gatsby },
+    // { id: 10, title: "The Great Gatsby", cover: Gatsby },
     { id: 11, title: "Tintin in Tibet", cover: Tintin },
-    { id: 12, title: "Naruto", cover: Naruto },
+    // { id: 12, title: "Naruto", cover: Naruto },
+    { id: 13, title: "Born a Crime", cover: BaC },
+    { id: 2, title: "Great Expectations", cover: GE },
+
   ];
 
   const readingNow = [
     { id: 1, title: "Atomic Habits", cover: AtomicHabits },
-    { id: 2, title: "Great Expectations", cover: GE },
+    { id: 2, title: "Algorithm Design", cover: Algo, cropRight: true },
     { id: 3, title: "Motorcycle Diaries", cover: MD },
   ];
 
   const nextToRead = [
     { id: 1, title: "Love Poems", cover: Neruda },
-    { id: 2, title: "Algorithm Design", cover: Algo },
+    { id: 2, title: "The Coming Wave", cover: thecomingwave },
     { id: 3, title: "Hackers and Painters", cover: HackersPainters },
-    // { id: 4, title: "Next Book 4", cover: "/api/placeholder/150/225" },
-    // { id: 5, title: "Next Book 5", cover: "/api/placeholder/150/225" },
-    // { id: 6, title: "Next Book 6", cover: "/api/placeholder/150/225" },
   ];
 
   return (
@@ -75,7 +76,11 @@ function BookSection({ title, books }) {
         {books.map(book => (
           <div key={book.id} className="book-item">
             <div className="book-cover">
-              <img src={book.cover} alt={`Cover of ${book.title}`} />
+              <img 
+                src={book.cover} 
+                alt={`Cover of ${book.title}`}
+                className={book.cropRight ? 'crop-right' : ''}
+              />
             </div>
             <div className="book-title">{book.title}</div>
           </div>

@@ -104,16 +104,3 @@
   border-top: 1px solid #ddd;
   margin-top: 40px;
 }
-
-/* Responsive styles for mobile */
-@media (max-width: 768px) {
-  .blog-header {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-  }
-  
-  .blog-header h1 {
-    margin-bottom: 5px;
-  }
-}

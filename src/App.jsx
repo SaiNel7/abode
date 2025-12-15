@@ -61,7 +61,7 @@ function Home() {
       </div>
       <div className="bio-section">
       New Delhi --{'>'} Doha --{'>'} Toronto --{'>'} Philly --{'>'} Noo Yawk --{'>'} Ithaca<br/><br/>
-        Welcome to the gallery of me. I'm a student of life (currently at Cornell) who's intrigued by both hackers and painters. I love everything philosophy and computer science.
+        Welcome to the gallery of me. I'm a student of life (currently at Cornell) intrigued by both hackers and painters. I love everything philosophy, art, and computer science.
         <br/><br/>
         Shoot me an email at skn29 [at] cornell [dot] edu
       </div>
