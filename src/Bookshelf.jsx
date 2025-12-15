@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Bookshelf.css';
 import Siddhartha from "./bookcovers/fav/siddhartha.jpg"
@@ -69,6 +70,12 @@ function Bookshelf() {
 
 // BookSection component to display each section with its books
 function BookSection({ title, books }) {
+  const [loadedImages, setLoadedImages] = useState({});
+
+  const handleImageLoad = (bookId) => {
+    setLoadedImages(prev => ({ ...prev, [bookId]: true }));
+  };
+
   return (
     <div className="book-section">
       <h2 className="section-title">{title}</h2>
@@ -76,10 +83,12 @@ function BookSection({ title, books }) {
         {books.map(book => (
           <div key={book.id} className="book-item">
             <div className="book-cover">
+              {!loadedImages[book.id] && <div className="skeleton-cover" />}
               <img 
                 src={book.cover} 
                 alt={`Cover of ${book.title}`}
-                className={book.cropRight ? 'crop-right' : ''}
+                className={`${book.cropRight ? 'crop-right' : ''} ${loadedImages[book.id] ? 'loaded' : 'loading'}`}
+                onLoad={() => handleImageLoad(book.id)}
               />
             </div>
             <div className="book-title">{book.title}</div>

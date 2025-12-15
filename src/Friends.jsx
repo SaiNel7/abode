@@ -30,9 +30,9 @@ const thinkers = [
   // },
   {
     id: 4,
-    name: "Paul Graham",
-    doodle: "/doodles/graham.png",
-    link: "https://www.paulgraham.com/index.html"
+    name: "Fei-Fei Li",
+    doodle: "/doodles/feifeili.png",
+    link: "https://profiles.stanford.edu/fei-fei-li"
   },
   {
     id: 5,
@@ -46,12 +46,24 @@ const thinkers = [
     doodle: "/doodles/kilian.png",
     link: "https://www.cs.cornell.edu/~kilian/"
   },
-  // {
-  //   id: 7,
-  //   name: "Éva Tardos",
-  //   doodle: "/doodles/tardos.png",
-  //   link: "https://en.wikipedia.org/wiki/%C3%89va_Tardos"
-  // },
+  {
+    id: 7,
+    name: "Éva Tardos",
+    doodle: "/doodles/tardos.png",
+    link: "https://en.wikipedia.org/wiki/%C3%89va_Tardos"
+  },
+  {
+    id: 8,
+    name: "Keith Haring",
+    doodle: "/doodles/haring.png",
+    link: "https://www.artnet.com/artists/keith-haring/"
+  },
+  {
+    id: 4,
+    name: "Paul Graham",
+    doodle: "/doodles/graham.png",
+    link: "https://www.paulgraham.com/index.html"
+  },
   // {
   //   id: 8,
   //   name: "Aiya",
