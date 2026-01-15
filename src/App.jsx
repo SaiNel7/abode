@@ -36,7 +36,7 @@ function Home() {
   useEffect(() => {
     const typeSpeed = 150;
     const deleteSpeed = 100;
-    const pauseBeforeDelete = 1000;
+    const pauseBeforeDelete = 750;
     const pauseBeforeNextWord = 500;
     
     const handleTyping = () => {
@@ -97,11 +97,13 @@ function Home() {
         <div className="column">
           <h2>projects</h2>
           <ul className="projects-list">
+            <li><a href="https://github.com/SaiNel7/workshop">workshop</a></li>
             <li><a href="https://prakriti-hack.netlify.app/">prakriti</a></li>
             <li><a href="https://getparkr.netlify.app/">parkr</a></li>
             <li><a href="https://socratic1100.netlify.app/">socratic</a></li>
             <li><a href="https://svtsrideshare.netlify.app/">svts-rideshare</a></li>
             <li><a href="https://github.com/SaiNel7/focallus">focallus</a></li>
+
           </ul>
         </div>
         <div className="column">
