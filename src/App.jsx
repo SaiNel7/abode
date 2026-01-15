@@ -8,10 +8,30 @@ import ScrollToTop from './ScrollToTop';
 import Icarus from './assets/icarus.jpg';
 
 function Home() {
-  const words = ["Engineer", "Optimist", "Tinkerer", "Writer", "Artist"];
+  const words = ["Engineer", "Hot Sauce Connoisseur", "Product Enthusiast", "Writer", "Tinkerer"];
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
   const [currentText, setCurrentText] = useState('');
   const [isDeleting, setIsDeleting] = useState(false);
+  const [currentTime, setCurrentTime] = useState('');
+
+  // Clock effect
+  useEffect(() => {
+    const updateTime = () => {
+      const now = new Date();
+      const timeString = now.toLocaleTimeString('en-US', {
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit',
+        hour12: true,
+        timeZone: 'America/New_York'
+      });
+      setCurrentTime(`${timeString} EST`);
+    };
+    
+    updateTime();
+    const clockInterval = setInterval(updateTime, 1000);
+    return () => clearInterval(clockInterval);
+  }, []);
   
   useEffect(() => {
     const typeSpeed = 150;
@@ -51,8 +71,7 @@ function Home() {
   }, [currentText, currentWordIndex, isDeleting, words]);
   
   return (
-    <>
-      {/* <div className="profile-image">
+    <>      {/* <div className="profile-image">
         <img src={Icarus} alt="Icarus painting" />
       </div>  */}
       <div className="header-container">
@@ -61,9 +80,9 @@ function Home() {
       </div>
       <div className="bio-section">
       New Delhi --{'>'} Doha --{'>'} Toronto --{'>'} Philly --{'>'} Noo Yawk --{'>'} Ithaca<br/><br/>
-        Hi! Welcome to the gallery of me. I'm a student of life (currently at Cornell) intrigued by both hackers and painters. I love everything philosophy, art, and computer science.
-        <br/><br/>
-        Shoot me an email at skn29 [at] cornell [dot] edu
+      Hi! Welcome to the gallery of me. I'm a student of life (currently at Cornell) intrigued by both hackers and painters. I love everything philosophy, art, and computer science.
+      <br/><br/>
+      Shoot me an email at skn29 [at] cornell [dot] edu
       </div>
       <div className="two-column-layout">
         <div className="column">

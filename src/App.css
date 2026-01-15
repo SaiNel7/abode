@@ -147,6 +147,14 @@ h2 {
   color: #95019a;
 }
 
+.local-time {
+  font-family: 'SF Mono', 'Consolas', 'Monaco', monospace;
+  font-size: 0.85em;
+  color: #888;
+  letter-spacing: 0.5px;
+  margin-bottom: 15px;
+}
+
 .profile-image {
   width: 100%; 
   display: flex;
