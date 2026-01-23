@@ -20,7 +20,7 @@ import Algo from "./bookcovers/curr/algorithms.jpg"
 import BaC from "./bookcovers/fav/bornacrime.jpg"
 import Didion from "./bookcovers/curr/didion.jpg"
 import AlignmentProblem from "./bookcovers/list/AlignmentProblem.jpg"
-import Godot from "./bookcovers/fav/Godot.jpg"
+import Godot from "./bookcovers/fav/godot.jpg"
 
 import Neruda from "./bookcovers/list/neruda.jpg"
 import thecomingwave from "./bookcovers/list/thecomingwave.jpg"
