@@ -61,7 +61,7 @@ function Blog() {
         </div>
         
         <div className="separator"></div>
-        <p>there are no detours</p> 
+      <p style={{ fontStyle: 'italic', fontSize: '0.8em' }}>there are no detours</p>
       </div>
     );
   }
