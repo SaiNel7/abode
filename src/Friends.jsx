@@ -138,6 +138,7 @@ function Friends() {
 // PersonCard component for each doodle
 function PersonCard({ person }) {
   const [showBubble, setShowBubble] = useState(false);
+  const [imageLoaded, setImageLoaded] = useState(false);
   const hoverTimeoutRef = useRef(null);
   const isCamus = person.name === "Albert Camus";
 
@@ -183,13 +184,16 @@ function PersonCard({ person }) {
       onMouseLeave={handleMouseLeave}
     >
       <div className="doodle-container">
-        <img 
-          src={person.doodle} 
-          alt={`${person.name} doodle`} 
-          className="doodle"
+        {!imageLoaded && <div className="skeleton-orb" />}
+        <img
+          src={person.doodle}
+          alt={`${person.name} doodle`}
+          className={`doodle ${imageLoaded ? 'loaded' : 'loading'}`}
+          onLoad={() => setImageLoaded(true)}
           onError={(e) => {
             // Fallback for missing images during development
             e.target.style.display = 'none';
+            setImageLoaded(true);
           }}
         />
         {isCamus && showBubble && (

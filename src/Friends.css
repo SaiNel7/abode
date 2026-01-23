@@ -70,6 +70,30 @@
   width: 100px;
   height: 100px;
   margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Skeleton orb placeholder */
+.skeleton-orb {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #e8e8e8 0%, #d0d0d0 100%);
+  animation: pulse-orb 1.8s ease-in-out infinite;
+}
+
+@keyframes pulse-orb {
+  0%, 100% {
+    transform: scale(0.8);
+    opacity: 0.4;
+  }
+  50% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
 }
 
 /* Speech bubble for Camus Easter egg */
@@ -112,6 +136,15 @@
   height: 100%;
   object-fit: contain;
   animation: wiggle 3s ease-in-out infinite;
+  transition: opacity 0.3s ease;
+}
+
+.doodle.loading {
+  opacity: 0;
+}
+
+.doodle.loaded {
+  opacity: 1;
 }
 
 /* Wiggle animation */
