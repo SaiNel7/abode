@@ -80,7 +80,7 @@ function Home() {
       </div>
       <div className="bio-section">
       New Delhi --{'>'} Doha --{'>'} Toronto --{'>'} Philly --{'>'} Noo Yawk --{'>'} Ithaca<br/><br/>
-      Hi! Welcome to the gallery of me. I'm a student of life (currently at Cornell) intrigued by both hackers and painters. I love everything philosophy, art, and computer science.
+      Hi! Welcome to the gallery of me. I'm a student of life (currently at Cornell) intrigued by both hackers and painters. I love everything philosophy, art, and computer science, with a growing focus on AI alignment and how we build systems that reflect human values.
       <br/><br/>
       Shoot me an email at skn29 [at] cornell [dot] edu
       </div>
