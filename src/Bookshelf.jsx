@@ -15,10 +15,12 @@ import Tintin from "./bookcovers/fav/tintin.jpg"
 import Naruto from "./bookcovers/fav/naruto.jpg"
 import AtomicHabits from "./bookcovers/curr/atomichabits.jpg"
 import GE from "./bookcovers/curr/greatexpectations.jpg"
-import MD from "./bookcovers/curr/motorcyclediaries.jpeg"
+import MD from "./bookcovers/curr/motorcyclediaries.jpg"
 import Algo from "./bookcovers/curr/algorithms.jpg"
 import BaC from "./bookcovers/fav/bornacrime.jpg"
-
+import Didion from "./bookcovers/curr/didion.jpg"
+import AlignmentProblem from "./bookcovers/list/AlignmentProblem.jpg"
+import Godot from "./bookcovers/fav/Godot.jpg"
 
 import Neruda from "./bookcovers/list/neruda.jpg"
 import thecomingwave from "./bookcovers/list/thecomingwave.jpg"
@@ -38,20 +40,26 @@ function Bookshelf() {
     { id: 11, title: "Tintin in Tibet", cover: Tintin },
     // { id: 12, title: "Naruto", cover: Naruto },
     { id: 13, title: "Born a Crime", cover: BaC },
-    { id: 2, title: "Great Expectations", cover: GE },
+    { id: 14, title: "Great Expectations", cover: GE },
+    { id: 15, title: "Atomic Habits", cover: AtomicHabits },
+    { id: 16, title: "Algorithm Design", cover: Algo, cropRight: true},
+    { id: 17, title: "Waiting for Godot", cover: Godot },
+
+
 
   ];
 
   const readingNow = [
-    { id: 1, title: "Atomic Habits", cover: AtomicHabits },
-    { id: 2, title: "Algorithm Design", cover: Algo, cropRight: true },
-    { id: 3, title: "Motorcycle Diaries", cover: MD },
+    { id: 1, title: "The Coming Wave", cover: thecomingwave },
+    { id: 2, title: "Hackers and Painters", cover: HackersPainters },
+    { id: 2, title: "Notes to John", cover: Didion },
   ];
 
   const nextToRead = [
     { id: 1, title: "Love Poems", cover: Neruda },
-    { id: 2, title: "The Coming Wave", cover: thecomingwave },
-    { id: 3, title: "Hackers and Painters", cover: HackersPainters },
+    { id: 2, title: "The Alignment Problem", cover: AlignmentProblem },
+    { id: 3, title: "Motorcycle Diaries", cover: MD },
+
   ];
 
   return (
@@ -64,6 +72,9 @@ function Bookshelf() {
       <BookSection title="Favorites" books={favorites} />
       <BookSection title="Reading Now" books={readingNow} />
       <BookSection title="Next to Read" books={nextToRead} />
+          <div className="separator"></div>
+
+      <p style={{ fontStyle: 'italic', fontSize: '0.8em' }}>always open to recommendations</p>
     </div>
   );
 }
@@ -77,6 +88,7 @@ function BookSection({ title, books }) {
   };
 
   return (
+    <div>
     <div className="book-section">
       <h2 className="section-title">{title}</h2>
       <div className="book-grid">
@@ -95,6 +107,7 @@ function BookSection({ title, books }) {
           </div>
         ))}
       </div>
+    </div>
     </div>
   );
 }
