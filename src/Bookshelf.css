@@ -137,7 +137,26 @@
     gap: 12px;
   }
 
+  .book-item {
+    cursor: pointer;
+  }
+
+  .book-cover:hover {
+    transform: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
   .book-title {
+    display: none;
+  }
+
+  .book-item.selected .book-cover {
+    transform: translateY(-8px);
+  }
+
+  .book-item.selected .book-title {
+    display: block;
     font-size: 0.75em;
+    margin-top: -12px;
   }
 }

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './Bookshelf.css';
 import Siddhartha from "./bookcovers/fav/siddhartha.jpg"
@@ -26,6 +26,19 @@ import Neruda from "./bookcovers/list/neruda.jpg"
 import thecomingwave from "./bookcovers/list/thecomingwave.jpg"
 import HackersPainters from "./bookcovers/list/h&p.jpg"
 function Bookshelf() {
+  const [selectedBook, setSelectedBook] = useState(null);
+
+  // Close selected book when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (e) => {
+      if (!e.target.closest('.book-item')) {
+        setSelectedBook(null);
+      }
+    };
+    document.addEventListener('click', handleClickOutside);
+    return () => document.removeEventListener('click', handleClickOutside);
+  }, []);
+
   const favorites = [
     { id: 1, title: "Siddhartha", cover: Siddhartha },
     { id: 2, title: "The Alchemist", cover: TheAlchemist },
@@ -69,9 +82,9 @@ function Bookshelf() {
         <Link to="/" className="back-link">back to home</Link>
       </div>
       
-      <BookSection title="Favorites" books={favorites} />
-      <BookSection title="Reading Now" books={readingNow} />
-      <BookSection title="Next to Read" books={nextToRead} />
+      <BookSection title="Favorites" books={favorites} selectedBook={selectedBook} setSelectedBook={setSelectedBook} />
+      <BookSection title="Reading Now" books={readingNow} selectedBook={selectedBook} setSelectedBook={setSelectedBook} />
+      <BookSection title="Next to Read" books={nextToRead} selectedBook={selectedBook} setSelectedBook={setSelectedBook} />
           <div className="separator"></div>
 
       <p style={{ fontStyle: 'italic', fontSize: '0.8em' }}>always open to recommendations</p>
@@ -80,11 +93,15 @@ function Bookshelf() {
 }
 
 // BookSection component to display each section with its books
-function BookSection({ title, books }) {
+function BookSection({ title, books, selectedBook, setSelectedBook }) {
   const [loadedImages, setLoadedImages] = useState({});
 
   const handleImageLoad = (bookId) => {
     setLoadedImages(prev => ({ ...prev, [bookId]: true }));
+  };
+
+  const handleBookClick = (bookKey) => {
+    setSelectedBook(prev => prev === bookKey ? null : bookKey);
   };
 
   return (
@@ -92,12 +109,21 @@ function BookSection({ title, books }) {
     <div className="book-section">
       <h2 className="section-title">{title}</h2>
       <div className="book-grid">
-        {books.map(book => (
-          <div key={book.id} className="book-item">
+        {books.map((book, index) => {
+          const bookKey = `${title}-${index}`;
+          return (
+          <div
+            key={bookKey}
+            className={`book-item ${selectedBook === bookKey ? 'selected' : ''}`}
+            onClick={(e) => {
+              e.stopPropagation();
+              handleBookClick(bookKey);
+            }}
+          >
             <div className="book-cover">
               {!loadedImages[book.id] && <div className="skeleton-cover" />}
-              <img 
-                src={book.cover} 
+              <img
+                src={book.cover}
                 alt={`Cover of ${book.title}`}
                 className={`${book.cropRight ? 'crop-right' : ''} ${loadedImages[book.id] ? 'loaded' : 'loading'}`}
                 onLoad={() => handleImageLoad(book.id)}
@@ -105,7 +131,7 @@ function BookSection({ title, books }) {
             </div>
             <div className="book-title">{book.title}</div>
           </div>
-        ))}
+        );})}
       </div>
     </div>
     </div>
