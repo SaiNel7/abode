@@ -1,9 +1,16 @@
+import goya from '../assets/de_goya.jpg';
+
 export const article = {
   id: 8,
   slug: "saturn",
   title: "Saturn Devouring His Son",
   date: "March 5, 2026",
   content: `
+    <figure style="text-align: left; margin: 1.5rem 0;">
+      <img src="${goya}" alt="Saturn Devouring His Son by Francisco de Goya" style="width: 40%; border-radius: 4px;" />
+      <figcaption style="font-style: italic; font-size: 0.8em; margin-top: 0.5rem;">Francisco de Goya, 1820</figcaption>
+    </figure>
+
     <p>Francisco De Goya painted Saturn Devouring His Son in Madrid, Spain in the 1820s as part of a set called The Black Paintings. Saturn depicts the tale of the Greco-Roman myth of Chronos (Saturn) eating his children in fear of Gaea's prophecy that he too will be overthrown by his offspring. However the painting diverges from the myth in that Goya depicts Saturn violently tearing apart his child. Saturn was painted during the Romantic period and carries themes of disillusionment with precepts of order and harmony. Goya embraces Romanticism and illustrates notions of monstrosity to create disturbance for the viewer. In particular, Goya uses certain artistic elements such as contrasting colors, Saturn's disposition and relates them to the source mythology to evoke a sensation of disgust and dissonance.</p>
 
     <p>There are several glaring traits in the painting that elicit a sensation of disturbance and unnaturalness. The primary focus of the painting is the mutilated corpse in the center of the canvas. The vibrant streaks of blood along the pale, innocent body immediately evokes disgust and awe for the viewer. By contrasting the dark color palette with the scarlet blood, Goya emphasizes Saturn's lifeless child as the central element of the painting. Above Saturn's left leg appears to be an erect phallus, a detail that compounds the viewer's revulsion. Yet this disgust contains a paradox, there exists a transgressive thrill in confronting such imagery, a sexual excitement derived from witnessing and hence participating in a profound disturbance. This is fundamentally about power. By presenting the phallus alongside cannibalistic violence, Goya forces us to recognize how desire and domination fuse at their darkest extreme. Saturn enacts his will upon fate itself through violence, the phallus signals not pleasure but assertion, a refusal to submit to prophecy. Similarly, Goya exercises dominance over his viewer, denying us the comfort of aesthetic distance. We cannot look away from this convergence of eroticism and horror so the painting seizes our attention and holds us accountable to our own morbid fascination. Desire and violence become inextricable as Saturn, submerged in his compulsion to control destiny, manifests power through the most primal means: consumption and procreation twisted into a single, horrifying act.</p>
